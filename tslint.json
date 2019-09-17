@@ -55,10 +55,11 @@
       {
         "allow": [],
         "depConstraints": [
-          {
-            "sourceTag": "*",
-            "onlyDependOnLibsWithTags": ["*"]
-          }
+          { "sourceTag": "platform:shared", "onlyDependOnLibsWithTags": ["platform:shared"] },
+          { "sourceTag": "platform:frontend", "onlyDependOnLibsWithTags": ["platform:frontend", "platform:shared", "platform:components"] },
+          { "sourceTag": "platform:backend", "onlyDependOnLibsWithTags": ["platform:backend", "platform:shared"] },
+          { "sourceTag": "platform:e2e", "onlyDependOnLibsWithTags": ["platform:e2e"] },
+          { "sourceTag": "platform:components", "onlyDependOnLibsWithTags": ["platform:shared"] }
         ]
       }
     ],
